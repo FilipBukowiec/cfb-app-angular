@@ -23,20 +23,15 @@ export class LoginComponent {
   onSubmit(): void {
     this.authService.login(this.username, this.password).subscribe(
       (response) => {
-        // Sprawdź, czy odpowiedź zawiera token
         if (response && response.token) {
-          // Zapisz token do localStorage
           localStorage.setItem('token', response.token);
-          // Przekieruj użytkownika na stronę admina
           this.router.navigate(['/admin']);
         } else {
-          // Obsłuż przypadek, gdy token nie jest obecny w odpowiedzi
           console.error('No token found in response');
           alert("Incorrect login or password")
         }
       },
       (error) => {
-        // Obsłuż błąd logowania
         console.error('Login failed', error);
       }
     );
