@@ -1,0 +1,52 @@
+<section>
+  <div class="example-flex-container">
+    <button
+      mat-fab
+      extended
+      [routerLink]="['./news']"
+      routerLinkActive="router-link-active"
+    >
+      <mat-icon>newspaper</mat-icon>
+      News
+    </button>
+
+
+
+
+    <button
+      mat-fab
+      extended
+      [routerLink]="['./media']"
+      routerLinkActive="router-link-active"
+    >
+      <mat-icon>subscriptions</mat-icon>
+      Media
+    </button>
+    <button
+    mat-fab
+    extended
+    [routerLink]="['./media']"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon>today</mat-icon>
+   Schedule plan
+  </button>
+
+
+    
+    <button
+      mat-fab
+      extended
+      [routerLink]="['/homepage']"
+      routerLinkActive="router-link-active"
+      (click)="logOut()"
+    >
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+
+
+  </div>
+</section>
+
+<router-outlet></router-outlet>
