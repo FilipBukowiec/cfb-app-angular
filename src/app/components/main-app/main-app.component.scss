@@ -1,58 +1,9 @@
-:host{
-    position: absolute;
-    width: 100%;
-    background-color: red;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.newsbar{
-    
-    bottom: 0;
-    width: 98vw;
-    height: 200px;
-    margin: 0 1rem 1rem 1rem;
-    display: flex;
-    align-items: flex-end;
-}
-
-
-
-
-.news-logo{
-    width: 10vw;
-}
-
-.marquee{
-    display: flex;
-    width: 82vw;
-    background-color: #fff;
-    
-    align-items: center;
-    font-size:2rem;
-    overflow: hidden;
- 
-}
-
-.date{
-    width: 10vw;
-    background-color: black;
-    // border-top-right-radius: 1rem;
-    // border-bottom-right-radius: 1rem;
-
-    color: #ffffff;
-   
-}
-
-
-.date, .marquee{
-    height: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4.5rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
-}
+:host {
+  position: absolute;
+  width: 100%;
+  background-color: red;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+ }
