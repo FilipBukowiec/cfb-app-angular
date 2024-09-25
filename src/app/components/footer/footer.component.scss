@@ -13,21 +13,20 @@
   }
   
   app-news-ticker{
-    display: flex;
-    width: 82vw;
+    display: flex !important;
+    width: 78vw;
     background-color: #ffffff;
     align-items: center;
-    font-size: 2rem;
+    font-size: 4.5rem;
     overflow: hidden;
     height: 6rem;
+    line-height: 1 !important;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
     
       }
   
-  .date {
-    width: 10vw;
-    background-color: black;
-    color: #ffffff;
-  }
+
   
   .date{
     height: 6rem;
@@ -36,5 +35,9 @@
     justify-content: center;
     font-size: 4.5rem;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    width: 12vw;
+    background-color: black;
+    color: #ffffff;
   }
   
+
