@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main-menu',
@@ -11,13 +11,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './main-menu.component.scss',
 })
 export class MainMenuComponent {
+
   isStart: boolean = false;
   isFullscreen: boolean = false;
-
-
-
-
-
 
   toggleFullscreen(): void {
     if (!this.isFullscreen) {
@@ -55,4 +51,49 @@ export class MainMenuComponent {
       doc.msExitFullscreen();
     }
   }
+
+
+
+  constructor(private router: Router) {
+    // Nasłuchuj na zmiany nawigacji
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.updateButtonState(event.urlAfterRedirects);
+      }
+    });
+  }
+
+  // Aktualizacja stanu przycisku na podstawie aktualnej ścieżki
+  updateButtonState(url: string): void {
+    // Zakładamy, że strona "start" ma URL "/start"
+    this.isStart = url === '/start';  // Ustaw isStart na true, jeśli URL to "/start"
+  }
+
+  // Funkcja wywoływana po kliknięciu przycisku
+  handleButtonClick(): void {
+    if (this.isStart) {
+      this.refreshComponent();  // Odśwież komponent na stronie "start"
+    } else {
+      this.navigateToStart();   // Przejdź do strony "start"
+    }
+  }
+
+  // Nawigacja do strony "start"
+  navigateToStart(): void {
+    this.router.navigate(['/start']);
+  }
+
+  // Metoda do odświeżenia komponentu
+  refreshComponent(): void {
+    this.router.navigate([this.router.url]).then(() => {
+      console.log('Komponent został odświeżony');
+    });
+  
+  }
+
+
+
+
+
+
 }
