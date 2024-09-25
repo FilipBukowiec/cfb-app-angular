@@ -1,44 +1,32 @@
 <section>
-    <div class="example-flex-container">
-      <button mat-fab extended [routerLink]="['/start']" routerLinkActive="router-link-active" >
-        <mat-icon>play_arrow</mat-icon>
-        Start app
-      </button>
-  
-      <button
-        mat-fab
-        extended
-        [routerLink]="['/homepage']"
-        routerLinkActive="router-link-active"
-      >
-        <mat-icon>home</mat-icon>
-        Homepage
-      </button>
-  
-       
-      <button
-        mat-fab
-        extended
-        [routerLink]="['/admin']"
-        routerLinkActive="router-link-active"
-      >
-        <mat-icon>settings</mat-icon>
-        Admin
-      </button>
-  
-      <button mat-fab extended [routerLink]="['/about']" routerLinkActive="router-link-active" >
-        <mat-icon>group</mat-icon>
-        About app
-      </button>
-  
-      <button mat-fab extended (click)="toggleFullscreen()">
-        <mat-icon
-          >{{ isFullscreen ? "close_fullscreen" : "fullscreen" }}
-        </mat-icon>
-        {{ isFullscreen ? "Exit FullScreen" : "Go FullScreen" }}
-      </button>
-  
-  
-    </div>
-  </section>
-  
+  <div class="example-flex-container">
+    <button mat-fab extended (click)="handleButtonClick()">
+      <mat-icon>{{ isStart ? "refresh" : "play_arrow" }}</mat-icon>
+      {{ isStart ? 'Refresh' : 'Start' }}
+    </button>
+
+    <button mat-fab extended [routerLink]="['/homepage']" routerLinkActive="router-link-active">
+      <mat-icon>home</mat-icon>
+      Homepage
+    </button>
+
+
+    <button mat-fab extended [routerLink]="['/admin']" routerLinkActive="router-link-active">
+      <mat-icon>settings</mat-icon>
+      Admin
+    </button>
+
+    <button mat-fab extended [routerLink]="['/about']" routerLinkActive="router-link-active">
+      <mat-icon>group</mat-icon>
+      About app
+    </button>
+
+    <button mat-fab extended (click)="toggleFullscreen()">
+      <mat-icon>{{ isFullscreen ? "close_fullscreen" : "fullscreen" }}
+      </mat-icon>
+      {{ isFullscreen ? "Exit FullScreen" : "Go FullScreen" }}
+    </button>
+
+
+  </div>
+</section>
