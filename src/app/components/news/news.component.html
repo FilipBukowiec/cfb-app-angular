@@ -1,9 +1,10 @@
+
 <table>
   <tr>
     <td colspan="2">
       <input type="text" [(ngModel)]="newContent" placeholder="Write something and add news" />
     </td>
-    <td><button mat-fab extended (click)="addNews()">Add news</button></td>
+    <td><button mat-fab extended (click)="addNews()">Add news</button><button mat-fab extended (click)="updateAllOrders()">Update All</button></td>
   </tr>
 
   <tr>
@@ -14,12 +15,16 @@
 
   <tr *ngFor="let news of newsList; let i = index">
     <td>{{i + 1}}</td>
-    <td>{{news.content}}</td>
+    <td class="news">{{news.content}}</td>
     <td>
       <mat-icon (click)="moveUp(news)">arrow_upward</mat-icon>
     <mat-icon (click)="moveDown(news)">arrow_downward</mat-icon> 
-     <!--<mat-icon (click)="editNews(news)">edit</mat-icon>
-      <mat-icon (click)="deleteNews(news._id)">delete</mat-icon> -->
+     <!--<mat-icon (click)="editNews(news)">edit</mat-icon> -->
+      <mat-icon (click)="deleteNews(news)">delete</mat-icon>
     </td>
   </tr>
 </table>
+
+
+
+
