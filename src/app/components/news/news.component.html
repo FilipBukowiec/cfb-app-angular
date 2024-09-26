@@ -1,9 +1,9 @@
 <table>
   <tr>
     <td colspan="2">
-      <input type="text" placeholder="Write something and add news" />
+      <input type="text" [(ngModel)]="newContent" placeholder="Write something and add news" />
     </td>
-    <td><button mat-fab extended>Add news</button></td>
+    <td><button mat-fab extended (click)="addNews()">Add news</button></td>
   </tr>
 
   <tr>
@@ -12,22 +12,14 @@
     <th>Action</th>
   </tr>
 
-  <tr>
-    <td>1</td>
+  <tr *ngFor="let news of newsList; let i = index">
+    <td>{{i + 1}}</td>
+    <td>{{news.content}}</td>
     <td>
-      News jakiś tam Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-      Distinctio eaque, iusto deserunt ratione illum accusamus ab aliquid
-      quaerat reprehenderit qui expedita ullam fuga rerum quasi, obcaecati
-      magnam nostrum facilis aut. Enim deserunt saepe quas, officiis vel
-      deleniti illo. Eum officia id voluptatibus aspernatur voluptatem molestias
-      laborum atque, nesciunt delectus sed! Quibusdam fugit ut eius minus ipsa!
-      Qui possimus mollitia dolore.
-    </td>
-    <td>
-      <mat-icon>arrow_upward</mat-icon>
-      <mat-icon>arrow_downward</mat-icon>
-      <mat-icon>edit</mat-icon>
-      <mat-icon>delete</mat-icon>
+      <mat-icon (click)="moveUp(news)">arrow_upward</mat-icon>
+    <mat-icon (click)="moveDown(news)">arrow_downward</mat-icon> 
+     <!--<mat-icon (click)="editNews(news)">edit</mat-icon>
+      <mat-icon (click)="deleteNews(news._id)">delete</mat-icon> -->
     </td>
   </tr>
 </table>
