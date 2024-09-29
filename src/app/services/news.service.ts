@@ -7,7 +7,7 @@ import { News } from '../models/news.model';
   providedIn: 'root',
 })
 export class NewsService {
-  private apiUrl = 'http://localhost:3000/news'; // Upewnij się, że to jest poprawny adres API
+  private apiUrl = 'http://localhost:3000/news'; 
 
   constructor(private http: HttpClient) {}
 
@@ -19,11 +19,19 @@ export class NewsService {
     return this.http.post<News>(this.apiUrl, { content });
   }
 
-  updateAllNewsOrders(updatedOrders: { _id: string; order: number }[]): Observable<any> {
-    return this.http.put(this.apiUrl, updatedOrders);
+  moveNewsUp(id: string): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/move-up/${id}`, {});
+  }
+
+  moveNewsDown(id: string): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/move-down/${id}`, {});
   }
 
   deleteNews(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+  editNews(id: string, content: string): Observable<News> {
+    return this.http.put<News>(`${this.apiUrl}/edit/${id}`, { content });
   }
 }

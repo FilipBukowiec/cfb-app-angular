@@ -1,34 +1,42 @@
-:host{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-td{
-    
-    padding: 20px;
-    text-align: center;
 
+td {
+  padding: 20px;
+  text-align: center;
+ 
 }
 
-table{
-    margin-top: 2rem;
-    width: 60%;
-    
+table {
+  margin-top: 2rem;
+  width: 60%;
+  background-color: rgba($color: #fff, $alpha: 0.9);
+  border-radius: 5px;
 }
 
-input{
-    width: 100%;
+input {
+  width: 100%;
 }
-
 
 button {
-    background-color: #004f4f;
-    color: #fff;
-    font-size: 1rem;
-  }
+  background-color: #004f4f;
+  color: #fff;
+  font-size: 1rem;
+}
 
-  .news{
-    text-align: justify;
-  }
+.news {
+  text-align: justify;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+
+.action {
+  text-align: right;
+}
