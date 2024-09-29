@@ -1,0 +1,24 @@
+:host{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.divek{
+display: grid;
+grid-template-columns: 1fr 3fr;
+background-color: aqua;
+width: 80%;
+border-radius: 10px;
+}
+
+.dupa{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+
+.create{
+    background-color: gray;
+}

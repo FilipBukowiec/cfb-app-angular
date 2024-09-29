@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './guards/auth.guard';
 import { AboutComponent } from './components/about/about.component';
 import { MainAppComponent } from './components/main-app/main-app.component';
+import { GymScheduleComponent } from './components/gym-schedule/gym-schedule.component';
 
 export const routes: Routes = [
   {
@@ -31,6 +32,10 @@ export const routes: Routes = [
         path: 'news',
         component: NewsComponent,
       },
+
+      { path: 'gym-schedule', 
+        component: GymScheduleComponent },
+
       {
         path: 'media',
         component: MediaComponent,
