@@ -2,7 +2,7 @@
   <div class="left-col">
     <div class="add-activity-form">
       <form [formGroup]="selectForm" (ngSubmit)="onSubmit()">
-        <div>
+        <div class="form-row">
           <label for="day">Choose day</label>
           <select name="" id="day" formControlName="day">
             <option value="" disabled selected hidden>Choose day</option>
@@ -10,7 +10,7 @@
           </select>
         </div>
 
-        <div>
+        <div class="form-row">
           <label for="room">Choose room</label>
           <select name="" id="room" formControlName="room">
             <option value="" disabled selected hidden>
@@ -22,16 +22,37 @@
           </select>
         </div>
 
-        <div>
-          <label for="time">Choose Time</label>
-          <select id="time" formControlName="time">
-            <option value="" disabled selected hidden>Choose time</option>
-            <option *ngFor="let time of times" [value]="time">{{ time }}</option>
-          </select>
+        <div class="form-row">
+          <label for="timeStartHour">Start Time</label>
+          <div class="time-select">
+            <select id="timeStartHour" formControlName="timeStartHour">
+              <option value="" disabled selected hidden>Hour</option>
+              <option *ngFor="let hour of hours" [value]="hour">{{ hour }}</option>
+            </select>
+        
+            <select id="timeStartMinute" formControlName="timeStartMinute">
+              <option value="" disabled selected hidden>Minute</option>
+              <option *ngFor="let minute of minutes" [value]="minute">{{ minute }}</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <label for="timeEndHour">End Time</label>
+          <div class="time-select">
+            <select id="timeEndHour" formControlName="timeEndHour">
+              <option value="" disabled selected hidden>Hour</option>
+              <option *ngFor="let hour of hours" [value]="hour">{{ hour }}</option>
+            </select>
+        
+            <select id="timeEndMinute" formControlName="timeEndMinute">
+              <option value="" disabled selected hidden>Minute</option>
+              <option *ngFor="let minute of minutes" [value]="minute">{{ minute }}</option>
+            </select>
+          </div>
         </div>
 
-
-        <div>
+        <div class="form-row">
           <label for="class">Choose Class</label>
           <select id="class" formControlName="class">
             <option value="" disabled selected hidden>Choose class</option>
@@ -41,7 +62,7 @@
           </select>
         </div>
 
-        <div>
+        <div class="form-row">
           <label for="trainer">Choose Trainer</label>
           <select id="trainer" formControlName="trainer">
             <option value="" disabled selected hidden>Choose trainer</option>
@@ -50,7 +71,7 @@
             </option>
           </select>
         </div>
-        <button type="submit">add activity</button>
+        <button mat-fab extended type="submit">add activity</button>
       </form>
 
 

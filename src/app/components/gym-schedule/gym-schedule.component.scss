@@ -27,6 +27,9 @@ button {
   background-color: #004f4f;
   color: #fff;
   font-size: 1rem;
+  padding: 0 10px;
+  width: auto;
+
 }
 
 nav {
@@ -51,4 +54,10 @@ form {
   flex-direction: column;
   gap: 2rem;
   text-align: justify;
+}
+
+.form-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 10px;
 }
