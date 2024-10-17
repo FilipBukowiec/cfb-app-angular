@@ -1,27 +1,28 @@
-// Import the functions you need from the SDKs you need
+// src/environments/firebase.config.ts
+
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// Załaduj zmienne środowiskowe z pliku .env
+require('dotenv').config();
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDPoTzHZCjnBQeqVmV1e09-qvXY24kInqE',
-  authDomain: 'cfbytom-app.firebaseapp.com',
-  projectId: 'cfbytom-app',
-  storageBucket: 'cfbytom-app.appspot.com',
-  messagingSenderId: '784860470676',
-  appId: '1:784860470676:web:d72fdd471f2bfbd6c4c381',
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Inicjalizujemy Firestore i Storage dla użycia w aplikacji
+// Initialize Firestore and Storage for use in the application
 const firestore = getFirestore(app);
 const storage = getStorage(app);
 
-// Eksportujemy zainicjalizowane obiekty, aby były dostępne w innych plikach
+// Export the initialized objects to make them accessible in other files
 export { app, firestore, storage };

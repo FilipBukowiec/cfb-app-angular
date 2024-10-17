@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "dotenv": "^16.4.5",
     "dynamic-marquee": "^2.6.4",
     "firebase": "^10.14.1",
     "rxjs": "~7.8.0",
