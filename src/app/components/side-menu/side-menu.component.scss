@@ -1,0 +1,95 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+:host {
+  position: absolute;
+  display: flex;
+  z-index: 1500;
+}
+
+button {
+  background-color: transparent !important;
+}
+
+.navi-item {
+  width: 100%;
+}
+
+.nav-item:hover {
+  background-color: #2e2e36 !important;
+  color: #ffffff;
+}
+
+.btn-close {
+  background-color: white !important;
+  }
+
+
+.logo-menu {
+  height: 7rem;
+}
+
+.nav-link {
+  display: flex !important;
+  gap: 10px;
+}
+
+.navbar-toggler {
+  padding: 20px;
+}
+
+.side-menu {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offcanvas {
+  width: 250px !important ; 
+}
+
+.offcanvas-header {
+  height: 5rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+li {
+  border-bottom: 1px solid rgb(80, 80, 80);
+}
+li:hover {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.offcanvas-body ul {
+  margin: 0 !important; 
+  padding: 10px; 
+  width: 100%;
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.logo-menu {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  padding-left: 30px;
+}
+
+a {
+  cursor: pointer;
+  color: #a8a8a8 !important;
+}
+
+a:hover {
+  color: rgb(255, 255, 255) !important;
+}

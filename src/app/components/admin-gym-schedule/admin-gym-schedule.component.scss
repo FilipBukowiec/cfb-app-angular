@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .select-input{
+    display: flex;
+  }
+  
+  th{
+    text-align: center;
+  }
+  
+  .error-message{
+    font-size: 10px;
+    color: red;
+  }
+  
+
+  td{
+    display: flex;
+    flex-direction: column;
+  }

@@ -3,14 +3,18 @@
   width: 100%;
   height: 100%;
   background-color: #004f4f;
-
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo {
   width: 350px;
   animation: opacity1 2s linear;
+  z-index: 2
+  ;
 }
 
 @keyframes opacity1 {
@@ -22,3 +26,14 @@
     opacity: 1;
   }
 }
+
+
+
+
+
+.video{
+  width: 100vw;
+height: 100%;
+position: absolute;
+}
+

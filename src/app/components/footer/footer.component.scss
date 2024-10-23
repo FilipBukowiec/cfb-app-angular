@@ -15,12 +15,13 @@ app-news-ticker {
   display: flex !important;
   width: 78vw;
   background-color: #ffffff;
-  align-items: center;
+  align-items: center!important;
   font-size: 4.5rem;
   overflow: hidden;
   height: 6rem;
   line-height: 2 !important;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  justify-content: center!important;
 }
 
 .date {

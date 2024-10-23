@@ -1,63 +1,25 @@
 :host {
-  display: flex;
-  justify-content: center;
-}
-
-.navigation {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  background-color: white;
-  width: 80%;
-  border-radius: 10px;
-}
-
-.left-col {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-
-
-
-mat-label {
-  color: red;
-}
-
-button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: #004f4f;
-  color: #fff;
-  font-size: 1rem;
-  padding: 0 10px;
-  width: auto;
-
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-}
-
-form {
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 0.6rem;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
+  gap: 20px;
 }
 
 
-
-
-.container {
+.select-input{
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  text-align: justify;
 }
 
-.form-row{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 10px;
+th{
+  text-align: center;
+}
+
+.error-message{
+  font-size: 10px;
+  color: red;
 }

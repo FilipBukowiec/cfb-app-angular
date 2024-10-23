@@ -1,6 +1,6 @@
 <section>
-  <div class="example-flex-container">
-    <button mat-fab extended [routerLink]="['./news']" routerLinkActive="router-link-active">
+  <div class="menu-admin">
+    <button mat-fab extended [routerLink]="['./admin-news']" routerLinkActive="router-link-active">
       <mat-icon>newspaper</mat-icon>
       News
     </button>
@@ -9,11 +9,17 @@
       <mat-icon>subscriptions</mat-icon>
       Media
     </button>
-    <button mat-fab extended [routerLink]="['./gym-schedule']" routerLinkActive="router-link-active">
+    <button mat-fab extended [routerLink]="['./admin-gym-schedule']" routerLinkActive="router-link-active">
       <mat-icon>today</mat-icon>
       Gym schedule
     </button>
-
+   
+    <button mat-fab extended [routerLink]="['./gym-schedule']" routerLinkActive="router-link-active">
+      <mat-icon>image</mat-icon>
+      Club gallery
+    </button>
+   
+    
     <button mat-fab extended [routerLink]="['/homepage']" routerLinkActive="router-link-active" (click)="logOut()">
       <mat-icon>logout</mat-icon>
       Logout

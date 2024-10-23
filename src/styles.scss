@@ -1,11 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.mat-fab {
-    background-color: red !important; /* Ustaw kolor tła */
-    color: white !important; /* Ustaw kolor tekstu */
-  }
+html,
+body {
+  height: 100%;
+}
 
- 
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button {
+  background-color: #004f4f !important;
+  color: #fff !important;
+  font-size: 1rem;
+  border-radius: 5px!important;
+
+}
+
+
+
+mat-icon {
+  font-size: 2rem !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  
+
+}
+
+thead > tr {
+  background-color: transparent;
+  text-align: center;
+  color: #fff;
+}
+
+.add {
+  padding-bottom: 30px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0px 3px; 
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+tr {
+  text-align: justify;
+  background-color: #25252b;
+   color: #a8a8a8;
+}
+
+.table-row:hover {
+  background-color: #2e2e36;
+  color: #ffffff;
+}
+
+td {
+  padding: 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+

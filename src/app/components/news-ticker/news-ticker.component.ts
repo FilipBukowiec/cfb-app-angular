@@ -38,7 +38,7 @@ export class NewsTickerComponent implements AfterViewInit {
 
     // Inicjalizacja dynamic-marquee
     this.marqueeInstance = new Marquee($marquee, {
-      rate: -80,
+      rate: -110,
     });
 
     // Konfiguracja loopowania treści

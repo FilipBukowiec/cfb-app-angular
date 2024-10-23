@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { GymScheduleComponent } from './gym-schedule.component';
+import { GymScheduleComponent } from './gym-schedule.component'; // Import komponentu
 
 describe('GymScheduleComponent', () => {
   let component: GymScheduleComponent;
@@ -8,7 +7,7 @@ describe('GymScheduleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GymScheduleComponent]
+      declarations: [GymScheduleComponent], // Tylko deklaracja komponentu
     })
     .compileComponents();
 
@@ -18,6 +17,6 @@ describe('GymScheduleComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeTruthy(); // Test, czy komponent został poprawnie stworzony
   });
 });

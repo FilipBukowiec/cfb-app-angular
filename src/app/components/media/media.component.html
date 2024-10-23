@@ -1,2 +1,37 @@
-<p>media works!</p>
+<table>
+  <thead>
+    <tr>
+      <th class="add" colspan="2">
+        <input type="file" (change)="onFileSelected($event)" />
+      </th>
+      <th colspan="2" class="add">
+        <button mat-fab extended (click)="addFile()">Add file</button>
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>File Name</th>
+      <th>Preview</th>
+      <th>Action</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <tr class="table-row" *ngFor="let file of files$ | async">
+      <td>{{ file.order }}</td>
+      <td>{{ file.name }}</td>
+      <td class="photo-container"><img class="photo" src="{{ file.url }}" alt="" /></td>
+      <td>
+        <div class="icon-container">
+          <mat-icon *ngIf="file.order > 1" (click)="moveUp(file.id)" title="Move up media">arrow_upward</mat-icon>
+          <mat-icon *ngIf="file.order < (files$ | async)!.length" (click)="moveDown(file.id)"
+            title="Move down media">arrow_downward</mat-icon>
+          <mat-icon (click)="deleteFile(file.id)" title="Delete media">delete</mat-icon>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
