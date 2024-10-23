@@ -1,56 +1,58 @@
 <div class="side-menu">
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <mat-icon>menu</mat-icon>
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <mat-icon>menu</mat-icon>
     </button>
-  
+
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <img class="logo-menu" src="../../../assets/images/cfb vector final.svg">
-        <ul class="navbar-nav flex-grow-1 ">
-          <li class="nav-item">
-            <a class="nav-link active" [routerLink]="['/homepage']" routerLinkActive="router-link-active"
-              data-bs-dismiss="offcanvas">
-              <mat-icon>home</mat-icon>Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/start']" 
-               (click)="isOnStartPage ? refreshComponents(['swiper', 'footer']) : navigateToStart()" 
-               data-bs-dismiss="offcanvas">
-                <mat-icon>{{ isOnStartPage ? 'refresh' : 'start' }}</mat-icon>
-                {{ isOnStartPage ? 'Refresh app' : 'Start app' }}
-            </a>
-        </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/news']" routerLinkActive="router-link-active" data-bs-dismiss="offcanvas">
-              <mat-icon>newspaper</mat-icon>News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" data-bs-dismiss="offcanvas">
-              <mat-icon>settings</mat-icon>Admin</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/gym-schedule']" routerLinkActive="router-link-active"
-              data-bs-dismiss="offcanvas">
-              <mat-icon>today</mat-icon>Gym schedule</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-dismiss="offcanvas" (click)="toggleFullscreen()">
-              <mat-icon>{{ isFullscreen ? "close_fullscreen" : "fullscreen" }}</mat-icon>
-              {{ isFullscreen ? "Exit FullScreen" : "Go FullScreen" }}</a>
-          </li>
-          <li class="nav-item" *ngIf="isLoggedIn">
-            <a class="nav-link" [routerLink]="['/homepage']" routerLinkActive="router-link-active" data-bs-dismiss="offcanvas"
-              (click)="logOut()">
-              <mat-icon>logout</mat-icon>Logout</a>
-          </li>
-        </ul>
-      </div>
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <img class="logo-menu" src="../../../assets/images/cfb vector final.svg">
+            <ul class="navbar-nav flex-grow-1 ">
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/homepage']" routerLinkActive="router-link-active"
+                        data-bs-dismiss="offcanvas">
+                        <mat-icon>home</mat-icon>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" 
+                    [routerLink]="['/start']" 
+                    (click)="onStartClick($event)" 
+                    data-bs-dismiss="offcanvas">
+                     <mat-icon>{{ isOnStartPage ? 'refresh' : 'start' }}</mat-icon>
+                     {{ isOnStartPage ? 'Refresh app' : 'Start app' }}
+                 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/news']" routerLinkActive="router-link-active"
+                        data-bs-dismiss="offcanvas">
+                        <mat-icon>newspaper</mat-icon>News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active"
+                        data-bs-dismiss="offcanvas">
+                        <mat-icon>settings</mat-icon>Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/gym-schedule']" routerLinkActive="router-link-active"
+                        data-bs-dismiss="offcanvas">
+                        <mat-icon>today</mat-icon>Gym schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-dismiss="offcanvas" (click)="toggleFullscreen()">
+                        <mat-icon>{{ isFullscreen ? "close_fullscreen" : "fullscreen" }}</mat-icon>
+                        {{ isFullscreen ? "Exit FullScreen" : "Go FullScreen" }}</a>
+                </li>
+                <li class="nav-item" *ngIf="isLoggedIn">
+                    <a class="nav-link" [routerLink]="['/homepage']" routerLinkActive="router-link-active"
+                        data-bs-dismiss="offcanvas" (click)="logOut()">
+                        <mat-icon>logout</mat-icon>Logout</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-  
+</div>
