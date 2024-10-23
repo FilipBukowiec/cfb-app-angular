@@ -34,4 +34,5 @@ export class NewsService {
   editNews(id: string, content: string): Observable<News> {
     return this.http.put<News>(`${this.apiUrl}/edit/${id}`, { content });
   }
+  
 }
